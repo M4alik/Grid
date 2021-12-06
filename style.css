@@ -1,0 +1,51 @@
+/* Utilisation de Grid en CSS : https://css-tricks.com/ */
+body{
+    background: grey;
+}
+/* on définit un nom pour utiliser chaque élément dans le systéme grid avec la propriété : grid-area*/
+.box01 {
+    background: red;
+    grid-area: box1;
+}
+
+.box02 {
+    background: green;
+    grid-area: box2;
+}
+
+.box03 {
+    background: blueviolet;
+    grid-area: box3;
+}
+
+.box04 {
+    background: burlywood;
+    grid-area: box4;
+}
+
+.box05 {
+    background: cornflowerblue;
+
+    grid-area: box5;
+}
+
+.box06 {
+    background: cornsilk;
+    grid-area: box6;
+}
+/* 
+    on applique display: grid sur l'élément où on va utiliser le systéme grid.
+    on définit la largeur de chaque colonne dans le grid avec grid-template-columns ( on peut aussi définir la hauteur de chaque ligne avec grid-template-row
+    on utilise la propriété grid-template-areas pour place chaque élément dans la grille
+    on peut définir un écartement entre les colonnes ou les lignes avec les propriétés column-gap et row-gap
+*/
+#affichage {
+    display: grid;
+    grid-template-columns: 50% 30% 50%;
+    grid-template-areas: 
+        "box1 box2 box4"
+        ". box3 ."
+        "box5 . box6";
+    column-gap: 20px;
+    row-gap: 20px;    
+}
